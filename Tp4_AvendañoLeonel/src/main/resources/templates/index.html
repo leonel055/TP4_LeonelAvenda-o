@@ -1,31 +1,114 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta charset="UTF-8">
-	<title>TP4</title>
-	<!--Import Google Icon Font-->
-      <link data-th-href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+    <title>TP4 Avendaño Leonel</title>
 </head>
 <body>
-	<div class="container">
-		<header>
-			
-		</header>
-		<main>
-			<h1>HOLA MUNDO</h1>
-			<aside>
-				<h1>ASIDE</h1>
-			</aside>
-		</main>
+  	<header>
+  		<div th:replace="~{fragments/header :: header}"></div>
+  	</header>
 		
-		<footer>
-			<h1>FOOTER</h1>
-		</footer>
+    <div class="container my-4">
+        <div class="row">
+        
+            <aside class="col-md-3 mb-4">
+                <div class="list-group">
+                
+                    <a href="https://www.fi.unju.edu.ar/servicios/biblioteca.html" class="list-group-item list-group-item-action">Biblioteca</a>
+                    <a href="https://www.fi.unju.edu.ar/secretarias/sec-academica/calendario-academico.html" class="list-group-item list-group-item-action">Calendario Académico</a>
+                </div>
+            </aside>
+
+            
+            <main class="col-md-9">
+            
+            
+                <section id="Inicio" class="mb-4">
+                    <h1>Bienvenidos a la Facultad</h1>
+                    <p>¡Bienvenidos a la Facultad de Ingeniería de la Universidad Nacional de Jujuy!</p>
+                    <p>
+                    <p>En la Facultad de Ingeniería de la Universidad Nacional de Jujuy (UNJu), nos enorgullecemos de ser una institución de excelencia académica y de innovación tecnológica. Nuestra misión es formar profesionales altamente capacitados y comprometidos con el desarrollo sostenible de nuestra región y del país.</p>
+                </section>
+                
+                <section id="Carreras">
+                	<h1>Nuestras Carreras</h1>
+                	<p>En la Facultad de Ingeniería de la UNJu, ofrecemos una variedad de carreras diseñadas para satisfacer las necesidades del mercado laboral actual y futuro. Entre nuestras principales ofertas académicas se encuentran:</p>
+                	 	 <ul>
+                	 	 	<li>Analista Programador Universitario</li>
+                   			<li>Ingeniería Civil</li>
+                    		<li>Ingeniería Electromecánica</li>
+                    		<li>Ingeniería en Informática</li>
+                    		<li>Ingeniería en Recursos Naturales y Medio Ambiente</li>
+                		</ul>
+                </section>
+                
+			
+				<section id="Noticias">
+					<h1>Noticias</h1>
+				  <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">"Otra buena noticia para el estudiantado jujeño: la UNJu dictará Abogacía"</h5>
+                            
+                            <div class="container mt-3">
+       							<div class="row justify-content-center">
+            					 	<div class="col-auto">
+                						 <img src="/img/noticia1.png" alt="Logo" width="300" height="170">
+            						</div>
+        						</div>
+    						</div>
+                           
+                        </div>
+                  </div>
+                    
+                  
+                  
+                  <div class="card mb-3">
+		
+                        <div class="card-body">
+                            <h5 class="card-title">"Los legisladores provinciales expresaron su apoyo a la Unju"</h5>
+                            <div class="container mt-3">
+       							<div class="row justify-content-center">
+            					 	<div class="col-auto">
+                						 <img src="/img/noticia2.png" alt="Logo" width="300" height="170" class="d-inline-block align-text-top" >
+            						</div>
+        						</div>
+    						</div>
+                        </div>
+                  </div>
+			
+
+				  <div class="card mb-3">
+		
+                        <div class="card-body">
+                            <h5 class="card-title">"La Unju atraviesa un momento económico complejo, pero su funcionamiento está asegurado"</h5>
+                             <div class="container mt-3">
+       							<div class="row justify-content-center">
+            					 	<div class="col-auto">
+                						 <img src="/img/noticia3.png" alt="Logo" width="300" height="170" class="d-inline-block align-text-top" >
+            						</div>
+        						</div>
+    						</div>
+                        </div>
+                  </div>
+			</section>
+			
+			
+			</main>
+        </div>
+    </div>
+
+   
+	<footer>
+		<div th:replace="~{fragments/footer :: footer}"></div>
+	</footer>
 	
-	
-	</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
