@@ -4,7 +4,7 @@ public class Carrera {
 	private String codigo;
     private String nombre;
     private int cantAnios;
-    private String estado;
+    private Boolean estado;
     
 	public String getCodigo() {
 		return codigo;
@@ -24,19 +24,22 @@ public class Carrera {
 	public void setCant_anios(int cant_anios) {
 		this.cantAnios = cant_anios;
 	}
-	public String getEstado() {
+	public Boolean getEstado() {
 		return estado;
 	}
-	public void setEstado(String estado) {
+	public void setEstado(Boolean estado) {
 		this.estado = estado;
 	}
 	
-	public Carrera(String codigo, String nombre, int cant_anios, String estado) {
+	public Carrera(String codigo, String nombre, int cant_anios, Boolean estado) {
 		super();
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.cantAnios = cant_anios;
 		this.estado = estado;
+	}
+	public Carrera() {
+		// TODO Auto-generated constructor stub
 	}
     
 }

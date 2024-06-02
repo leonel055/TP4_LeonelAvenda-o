@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	rel="stylesheet">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>FormularioCarrera</title>
+</head>
+<body>
+<div class="container">
+	<h1>FORMULARIO CARRERA</h1>
+	<form data-th-object = "${nuevaCarrer}">
+		<div class="col-md-5">
+			<label for="codigo" class="form-label">Codigo</label> 
+			<input type="text" class="form-control" id="codigo">
+		</div>
+		
+		<div class="col-md-5">
+			<label for="nombre" class="form-label">Password</label>
+			<input type="text" class="form-control" id="nombre">
+		</div>
+		
+		<div class="col-md-5">
+			<label for="años" class="form-label">Cantidad de Años</label>
+			<input type="number" class="form-control" id="años">
+		</div>
+		
+		<div class="mb-3 form-check">
+			<input type="checkbox" class="form-check-input" id="exampleCheck1">
+			<label class="form-check-label" for="exampleCheck1">Check me
+				out</label>
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

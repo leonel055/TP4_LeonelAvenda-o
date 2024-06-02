@@ -77,6 +77,12 @@ public class Docente {
 			this.email = email;
 			this.telefono = telefono;
 		}
+
+
+
+		public Docente() {
+			// TODO Auto-generated constructor stub
+		}
 	    
 	    
 }
