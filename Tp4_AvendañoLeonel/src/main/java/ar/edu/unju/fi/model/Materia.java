@@ -1,16 +1,33 @@
 package ar.edu.unju.fi.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Materia {
 	private String codigo;
     private String nombre;
     private String curso;
     private int cantHoras;
-    private String modalidad; 
-    private Docente docente;
-    private Carrera carrera;
+    private String modalidad;
+    private String docente;
+    private String carrera;
     
     
-    
+
+	public Materia(String codigo, String nombre, String curso, int cantHoras, String modalidad, String docente,
+			String carrera) {
+		super();
+		this.codigo = codigo;
+		this.nombre = nombre;
+		this.curso = curso;
+		this.cantHoras = cantHoras;
+		this.modalidad = modalidad;
+		this.docente = docente;
+		this.carrera = carrera;
+	}
+
+
+
 	public String getCodigo() {
 		return codigo;
 	}
@@ -71,40 +88,32 @@ public class Materia {
 
 
 
-	public Docente getDocente() {
+	public String getDocente() {
 		return docente;
 	}
 
 
 
-	public void setDocente(Docente docente) {
+	public void setDocente(String docente) {
 		this.docente = docente;
 	}
 
 
 
-	public Carrera getCarrera() {
+	public String getCarrera() {
 		return carrera;
 	}
 
 
 
-	public void setCarrera(Carrera carrera) {
+	public void setCarrera(String carrera) {
 		this.carrera = carrera;
 	}
 
 
 
-	public Materia(String codigo, String nombre, String curso, int cantHoras, String modalidad, Docente docente,
-			Carrera carrera) {
-		super();
-		this.codigo = codigo;
-		this.nombre = nombre;
-		this.curso = curso;
-		this.cantHoras = cantHoras;
-		this.modalidad = modalidad;
-		this.docente = docente;
-		this.carrera = carrera;
+	public Materia() {
+
 	}
 		
     

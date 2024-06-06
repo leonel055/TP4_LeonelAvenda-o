@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<meta name="viewport" content="	width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="/css/styles.css">
+<title>FormularioCarrera</title>
+</head>
+<body>
+<br><br>
+<div class="containerForm">
+	<h1>FORMULARIO CARRERA</h1>
+	
+	<form data-th-object="${nuevaCarrera}" data-th-action="@{/guardarCarrera}" method="post">
+		<div class="col-md-7">
+			<label for="codigo" class="form-label">Codigo</label> 
+			<input type="text" class="form-control" id="codigo" data-th-field="*{codigo}" required>
+		</div>
+		
+		<div class="col-md-7">
+			<label for="nombre" class="form-label">Nombre</label>
+			<input type="text" class="form-control" id="nombre" data-th-field="*{nombre}" required>
+		</div>
+		
+		<div class="col-md-7">
+			<label for="años" class="form-label">Cantidad de Años</label>
+			<input type="number" class="form-control" id="años" data-th-field="*{cantAnios}" required>
+		</div>
+	<br>
+		<button type="submit" class="btn btn-primary" >Guardar</button>
+		
+	</form>
+</div>
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
