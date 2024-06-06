@@ -1,5 +1,8 @@
 package ar.edu.unju.fi.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Carrera {
 	private String codigo;
     private String nombre;
@@ -18,11 +21,11 @@ public class Carrera {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int getCant_anios() {
+	public int getCantAnios() {
 		return cantAnios;
 	}
-	public void setCant_anios(int cant_anios) {
-		this.cantAnios = cant_anios;
+	public void setCantAnios(int cantAnios) {
+		this.cantAnios = cantAnios;
 	}
 	public Boolean getEstado() {
 		return estado;
