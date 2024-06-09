@@ -21,6 +21,7 @@ public class AlumnoController {
 		ModelAndView modelView = new ModelAndView("formAlumno");
 		
 		modelView.addObject("nuevoAlumno", nuevoAlumno);
+		modelView.addObject("band", false);
 		return modelView;
 	}
 	
@@ -56,11 +57,13 @@ public class AlumnoController {
 	@GetMapping("/modificarAlumno/{dni}")
 	public ModelAndView formModificarAlumnoa(@PathVariable("dni") String dni) {
 		
-		Alumno alumno1 = ListadoAlumno.buscarAlumnoPorDNI(dni);
+		Alumno alumno = ListadoAlumno.buscarAlumnoPorDNI(dni);
 
-		ModelAndView modelView = new ModelAndView("modificarAlumno");
+		ModelAndView modelView = new ModelAndView("formAlumno");
 		
-		modelView.addObject("alumnoModificado", alumno1);
+		modelView.addObject("nuevoAlumno", alumno);
+		
+		modelView.addObject("band", true);
 
 		return modelView;
 	}
@@ -69,17 +72,10 @@ public class AlumnoController {
 	public ModelAndView modificarAlumno(@ModelAttribute("alumnoModificado") Alumno alumno) {
 
 		ListadoAlumno.modificarAlumno(alumno);
-
-		return mostrarLista();
-	}
-
-	@GetMapping("/listaDeAlumnos")
-	public ModelAndView mostrarLista() {
 		
 		ModelAndView modelView = new ModelAndView("listaDeAlumnos");
-		
-		modelView.addObject("listadoAlumnos", ListadoAlumno.listarAlumnos());
 
+		modelView.addObject("ListadoAlumnos", ListadoAlumno.listarAlumnos());
 		return modelView;
 	}
 

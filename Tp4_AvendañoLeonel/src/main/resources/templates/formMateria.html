@@ -11,11 +11,11 @@
 <body>
 <div class="containerForm">
 	<h1>FORMULARIO MATERIA</h1>
-	<form data-th-object = "${nuevaMateria}" data-th-action="@{/guardarMateria}" method="post">
+	<form data-th-object = "${nuevaMateria}" data-th-action="${band}?@{/modificarMateria}:@{/guardarMateria}" method="post">
 	
 	<div >
 			<label for="codigo" class="form-label">Codigo</label> 
-			<input type="text" class="form-control" id="codigo" data-th-field="*{codigo}" required>				
+			<input type="text" class="form-control" id="codigo" data-th-field="*{codigo}" data-th-readonly="${band}" required>				
 		</div>
 		<div >
 			<label for="nombre" class="form-label">Nombre</label>

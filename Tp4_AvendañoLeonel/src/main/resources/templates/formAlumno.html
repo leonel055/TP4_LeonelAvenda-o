@@ -11,11 +11,11 @@
 <body>
 <div class="containerForm">
 	<h1>FORMULARIO ALUMNO</h1>
-	<form data-th-object = "${nuevoAlumno}" data-th-action="@{/guardarAlumno}" method="post">
+	<form data-th-object = "${nuevoAlumno}" data-th-action="${band}?@{/modificarAlumno}:@{/guardarAlumno}" method="post">
 	
 		<div>
 			<label for="dni" class="form-label">DNI</label> 
-			<input type="text" class="form-control" id="dni" data-th-field="*{dni}" required>				
+			<input type="text" class="form-control" id="dni" data-th-field="*{dni}" data-th-readonly="${band}" required>				
 		</div>
 		<div>
 			<label for="nombre" class="form-label">Nombre</label>

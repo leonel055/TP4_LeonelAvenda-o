@@ -12,11 +12,11 @@
 <br><br>
 <div class="containerForm">
 	<h1>FORMULARIO DOCENTE</h1>
-	<form data-th-object = "${nuevoDocente}" data-th-action="@{/guardarDocente}" method="post">
+	<form data-th-object = "${nuevoDocente}" data-th-action="${band}?@{/modificarDocente}:@{/guardarDocente}" method="post">
 	
 		<div>
 			<label for="legajo" class="form-label">Legajo</label> 
-			<input type="text" class="form-control" id="legajo" data-th-field="*{legajo}" required>
+			<input type="text" class="form-control" id="legajo" data-th-field="*{legajo}"  data-th-readonly="${band}" required>
 		</div>
 		
 		<div >
