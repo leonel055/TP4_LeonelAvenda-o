@@ -13,17 +13,17 @@
 	<h1>FORMULARIO CARRERA</h1>
 	
 	<form data-th-object="${nuevaCarrera}" data-th-action="@{/guardarCarrera}" method="post">
-		<div class="col-md-7">
+		<div>
 			<label for="codigo" class="form-label">Codigo</label> 
 			<input type="text" class="form-control" id="codigo" data-th-field="*{codigo}" required>
 		</div>
 		
-		<div class="col-md-7">
+		<div >
 			<label for="nombre" class="form-label">Nombre</label>
 			<input type="text" class="form-control" id="nombre" data-th-field="*{nombre}" required>
 		</div>
 		
-		<div class="col-md-7">
+		<div>
 			<label for="años" class="form-label">Cantidad de Años</label>
 			<input type="number" class="form-control" id="años" data-th-field="*{cantAnios}" required>
 		</div>

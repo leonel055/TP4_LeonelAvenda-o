@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -13,35 +13,35 @@
 	<h1>FORMULARIO ALUMNO</h1>
 	<form data-th-object = "${nuevoAlumno}" data-th-action="@{/guardarAlumno}" method="post">
 	
-		<div class="col-md-9">
+		<div>
 			<label for="dni" class="form-label">DNI</label> 
 			<input type="text" class="form-control" id="dni" data-th-field="*{dni}" required>				
 		</div>
-		<div class="col-md-9">
+		<div>
 			<label for="nombre" class="form-label">Nombre</label>
 			<input type="text" class="form-control" id="nombre" data-th-field="*{nombre}" required>
 		</div>
-		<div class="col-md-9">
+		<div>
 			<label for="apellido" class="form-label">Apellido</label>
 			<input type="text" class="form-control" id="apellido" data-th-field="*{apellido}" required>
 		</div>
-		<div class="col-md-9">
+		<div class="md">
 			<label for="email" class="form-label">Email</label>
 			<input type="email" class="form-control" id="email" data-th-field="*{email}" required>
 		</div>
-		<div class="col-md-9">
+		<div>
 			<label for="telefono" class="form-label">Telefono</label>
 			<input type="text" class="form-control" id="telefono" data-th-field="*{telefono}" required>
 		</div>
-		<div class="col-md-9">
+		<div>
 			<label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
 			<input type="date" class="form-control" id="fechaNacimiento" data-th-field="*{fechaNacimiento}" required>
 		</div>
-		<div class="col-md-9">
+		<div>
 			<label for="domicilio" class="form-label">Domicilio</label>
 			<input type="text" class="form-control" id="domicilio" data-th-field="*{domicilio}" required>
 		</div>
-		<div class="col-md-9">
+		<div>
 			<label for="lu" class="form-label">LU</label>
 			<input type="text" class="form-control" id="lu" data-th-field="*{LU}" required>
 		</div>

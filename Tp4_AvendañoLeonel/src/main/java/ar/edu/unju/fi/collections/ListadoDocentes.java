@@ -13,9 +13,9 @@ public class ListadoDocentes {
 	
 	
     public static List<Docente> ListarDocentes(){
-    	Predicate<? super Docente> activo = n -> n.getLegajo()!="-1";
-		List<Docente> docentesActivos = docentes.stream().filter(activo).collect(Collectors.toList());
-		return docentesActivos;
+    	Predicate<? super Docente> activo = n -> !n.getLegajo().equals("-1");
+        List<Docente> docentesActivos = docentes.stream().filter(activo).collect(Collectors.toList());
+        return docentesActivos;
 	}
     
     
@@ -42,6 +42,7 @@ public class ListadoDocentes {
 		            break;
 		        }
 		    }
+		 
 	 }
 	 
 	 
