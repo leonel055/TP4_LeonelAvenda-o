@@ -12,10 +12,10 @@
 <div class="containerForm">
 	<h1>FORMULARIO CARRERA</h1>
 	
-	<form data-th-object="${nuevaCarrera}" data-th-action="@{/guardarCarrera}" method="post">
+	<form data-th-object="${nuevaCarrera}" data-th-action="${band}?@{/modificarCarrera}:@{/guardarCarrera}" method="post">
 		<div>
 			<label for="codigo" class="form-label">Codigo</label> 
-			<input type="text" class="form-control" id="codigo" data-th-field="*{codigo}" required>
+			<input type="text" class="form-control" id="codigo" data-th-field="*{codigo}" data-th-readonly="${band}" required >
 		</div>
 		
 		<div >
