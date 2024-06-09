@@ -16,7 +16,7 @@
     
 <div class="container">
 	<h1>MODIFICAR DOCENTE</h1>
-	<form data-th-object="${docenteModificado}" data-th-action="@{/modificarDocente} "  method=post>
+	<form data-th-object="${docenteModificado}" data-th-action="@{/guardarDocente}"  method=post>
 	<div class="col-md-9">
 			<label for="legajo" class="form-label">Legajo</label> 
 			<input type="text" class="form-control" id="legajo" data-th-field="*{legajo}" required>
@@ -38,8 +38,8 @@
 		</div>
 		
 		<div class="col-md-9">
-			<label for="legajo" class="form-label">Telefono</label> 
-			<input type="text" class="form-control" id="legajo" data-th-field="*{telefono}" required>
+			<label for="telefono" class="form-label">Telefono</label> 
+			<input type="text" class="form-control" id="telefono" data-th-field="*{telefono}" required>
 		</div>
 		
 	<br>

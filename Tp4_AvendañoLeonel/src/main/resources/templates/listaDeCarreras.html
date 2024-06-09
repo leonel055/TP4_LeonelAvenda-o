@@ -30,7 +30,11 @@
 	      		<td data-th-text="${Carrera.codigo}"></td>
 	      		<td data-th-text="${Carrera.nombre}"></td>
 	      		<td data-th-text="${Carrera.cantAnios}"></td>
-	      		<td data-th-text="${Carrera.estado}"></td>
+	      		<td>
+	      			<span th:if="${Carrera.estado}">Activa</span>
+	      			<span th:if="${!Carrera.estado}">Activa</span>
+	      		</td>
+	      		<td></td>
 	      	<td>
 				<a data-th-href="@{'/borrarCarrera/'+${Carrera.codigo}}" class="btn btn-danger">Eliminar</a>					
 				<a data-th-href="@{'/modificarCarrera/'+${Carrera.codigo}}" class="btn btn-warning" >Modificar</a>
@@ -39,6 +43,7 @@
 		</tbody>
 
 	</table>
+		<a data-th-href="@{/formularioCarrera}" class="btn btn-primary">Nueva Carrera</a> 
 	</div>
 <br>
 <br><br><br><br>

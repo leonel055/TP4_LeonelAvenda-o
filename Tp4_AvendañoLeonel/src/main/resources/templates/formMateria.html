@@ -13,34 +13,35 @@
 	<h1>FORMULARIO MATERIA</h1>
 	<form data-th-object = "${nuevaMateria}" data-th-action="@{/guardarMateria}" method="post">
 	
-	<div class="col-9">
+	<div >
 			<label for="codigo" class="form-label">Codigo</label> 
 			<input type="text" class="form-control" id="codigo" data-th-field="*{codigo}" required>				
 		</div>
-		<div class="col-9">
+		<div >
 			<label for="nombre" class="form-label">Nombre</label>
 			<input type="text" class="form-control" id="nombre" data-th-field="*{nombre}" required>
 		</div>
-		<div class="col-9">
+		<div>
 			<label for="curso" class="form-label">Curso</label>
 			<input type="text" class="form-control" id="curso" data-th-field="*{curso}" required>
 		</div>
-		<div class="col-9">
+		<div >
 			<label for="horas" class="form-label">Cantidad de Horas</label>
 			<input type="number" class="form-control" id="horas" data-th-field="*{cantHoras}">
 		</div>
-		<div class="col-9">
+		<div >
 			<label for="modalidad" class="form-label">Modalidad</label>
 			<select id="modalidad" class="form-control" data-th-field="*{modalidad}">
 				<option value="Virtual">Virtual</option>
 				<option value="Presencial">Presencial</option>
 			</select>
 		</div>
-		<div class="mb-3">
+		<br>
+		<div >
 				<label for="Docente" class="form-label">Legajo del Docente</label>
 				<input type="text" class="form-control" id="Docente" data-th-field="*{docente}">
 			</div>
-			<div class="mb-3">
+			<div >
 				<label for="Carrera" class="form-label">Codigo de Carrera</label>
 				<input type="text" class="form-control" id="Carrera" data-th-field="*{carrera}">
 			</div>
