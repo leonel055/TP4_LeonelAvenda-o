@@ -9,13 +9,13 @@ public class Materia {
     private String curso;
     private int cantHoras;
     private String modalidad;
-    private String docente;
-    private String carrera;
+    private Docente docente;
+    private Carrera carrera;
     
     
 
-	public Materia(String codigo, String nombre, String curso, int cantHoras, String modalidad, String docente,
-			String carrera) {
+	public Materia(String codigo, String nombre, String curso, int cantHoras, String modalidad, Docente docente,
+			Carrera carrera) {
 		super();
 		this.codigo = codigo;
 		this.nombre = nombre;
@@ -88,25 +88,25 @@ public class Materia {
 
 
 
-	public String getDocente() {
+	public Docente getDocente() {
 		return docente;
 	}
 
 
 
-	public void setDocente(String docente) {
+	public void setDocente(Docente docente) {
 		this.docente = docente;
 	}
 
 
 
-	public String getCarrera() {
+	public Carrera getCarrera() {
 		return carrera;
 	}
 
 
 
-	public void setCarrera(String carrera) {
+	public void setCarrera(Carrera carrera) {
 		this.carrera = carrera;
 	}
 

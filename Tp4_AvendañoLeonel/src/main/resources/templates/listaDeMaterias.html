@@ -24,8 +24,8 @@
 					<th scope="col">Curso</th>
 					<th scope="col">Cantidad de Horas</th>
 					<th scope="col">Modalidad</th>
-					<th scope="col">Legajo del Docente</th>
-					<th scope="col">Codigo de la Carrera</th>
+					<th scope="col">Docente</th>
+					<th scope="col">Carrera</th>
 				</tr>
 			</thead>
 			<tbody data-th-each="Materia : ${ListadoMaterias}">
@@ -35,8 +35,8 @@
 					<td data-th-text="${Materia.curso}"></td>
 					<td data-th-text="${Materia.cantHoras}"></td>
 					<td data-th-text="${Materia.modalidad}"></td>
-					<td data-th-text="${Materia.docente}"></td>
-					<td data-th-text="${Materia.carrera}"></td>
+					<td data-th-text="${Materia.docente?.apellido}"></td>
+		      		<td data-th-text="${Materia.carrera?.nombre}"></td>
 					<td>
 						<a data-th-href="@{'/borrarMateria/' +${Materia.codigo}}" class="btn btn-danger">Eliminar</a>
 
