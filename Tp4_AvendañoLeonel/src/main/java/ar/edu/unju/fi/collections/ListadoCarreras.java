@@ -13,7 +13,7 @@ public class ListadoCarreras {
 		
 		//LISTA CARRERAS
 		public static List<Carrera> ListarCarreras(){
-			Predicate<Carrera> activo = n -> n.getEstado();
+			Predicate<Carrera> activo = n	 -> n.getEstado();
 			List<Carrera> carrerasActivas = carreras.stream().filter(activo).collect(Collectors.toList());
 
 			return carrerasActivas;
